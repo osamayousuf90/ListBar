@@ -1,12 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef , useEffect } from 'react';
 import obj from "../API";
 import { useNavigate } from "react-router-dom"
+import addMe from "../CallMe/addMe";
 
 const Home = () => {
   // const [searchVal, setSearchVal] = useState("");
   // const [arr, setArr] = useState([obj])
   const [inputValue, setInputValue] = useState('');
   const inputRef = useRef(null);  
+  const [state , setState] = useState()
   
   // const navigate = useNavigate();
     
@@ -43,7 +45,12 @@ const Home = () => {
      console.log("not number")
     	e.preventDefault();
     }
-}
+  }
+  
+  useEffect(() => {
+   console.log("state ===>", state)
+  }, [state])
+  
   return (
     <div>
       {/* <div className="container main">
@@ -88,6 +95,8 @@ const Home = () => {
         onChange={(e) => isDecimalKey(e)}
         placeholder='Place Values' />
         
+
+        <button onClick={() => addMe(setState)}>Call Me</button>
       </div>
      </div>
   )
