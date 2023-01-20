@@ -87,16 +87,16 @@ const Home = () => {
         <div className="grid-container_item"> <h5>Hello This is Porter</h5> <img src="https://statinfer.com/wp-content/uploads/dummy-user.png"/> </div>
         <div className="grid-container_item"> <h5>Hello This is Porter</h5> <img src="https://statinfer.com/wp-content/uploads/dummy-user.png" /> </div> 
         
-        <input
-        required name="balance" min="0" value={inputValue} step="any"
-        ref={inputRef}
-        type="text"
-        // onChange={(event) => handleChange(event)}
-        onChange={(e) => isDecimalKey(e)}
-        placeholder='Place Values' />
-        
+          {/* <input
+          required name="balance" min="0" value={inputValue} step="any"
+          ref={inputRef}
+          type="text"
+          // onChange={(event) => handleChange(event)}
+          onChange={(e) => isDecimalKey(e)}
+          placeholder='Place Values' />
+          
 
-        <button onClick={() => addMe(setState)}>Call Me</button>
+          <button onClick={() => addMe(setState)}>Call Me</button> */}
       </div>
      </div>
   )
