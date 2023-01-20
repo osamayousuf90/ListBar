@@ -47,9 +47,23 @@ const Home = () => {
     }
   }
   
-  useEffect(() => {
-   console.log("state ===>", state)
-  }, [state])
+  // useEffect(() => {
+  //  console.log("state ===>", state)
+  // }, [state])
+
+
+  const currentTime = new Date();
+const twentyFourHoursAgo = currentTime - (24 * 60 * 60 * 1000);
+const currentTimeInMilli = currentTime.getTime();
+
+if (currentTimeInMilli - twentyFourHoursAgo < 24 * 60 * 60 * 1000) {
+  const twentyFourHoursAgoDate = new Date(twentyFourHoursAgo);
+  const formattedTime = twentyFourHoursAgoDate.toLocaleTimeString();
+  console.log("24 hours ago: " + formattedTime);
+} else {
+  const formattedDate = currentTime.toLocaleDateString();
+  console.log("More than 24 hours ago: " + formattedDate);  
+}
   
   return (
     <div>

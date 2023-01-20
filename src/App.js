@@ -10,7 +10,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<CustomPagination/>}></Route>
+          <Route path='/' element={<Home/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
         </Routes>
       </BrowserRouter>
